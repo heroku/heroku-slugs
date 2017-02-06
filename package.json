@@ -1,0 +1,15 @@
+{
+  "name": "heroku-slugs",
+  "version": "1.0.0",
+  "description": "basic example heroku plugin",
+  "main": "index.js",
+  "author": "Jeff Dickey @dickeyxxx",
+  "repository": "phil/heroku-slugs",
+  "bugs": {
+    "url": "https://github.com/phil/heroku-slugs/issues"
+  },
+  "keywords": [
+    "heroku-plugin"
+  ],
+  "license": "ISC"
+}
