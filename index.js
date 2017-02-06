@@ -1,5 +1,3 @@
-'use strict'
-
 exports.topic = {
   name: 'slugs',
   // this is the help text that shows up under `heroku help`

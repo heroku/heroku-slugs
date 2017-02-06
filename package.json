@@ -1,12 +1,12 @@
 {
   "name": "heroku-slugs",
   "version": "1.0.0",
-  "description": "basic example heroku plugin",
+  "description": "Heroku CLI Plugin to manage and download slugs",
   "main": "index.js",
   "author": "Jeff Dickey @dickeyxxx",
-  "repository": "phil/heroku-slugs",
+  "repository": "heroku/heroku-slugs",
   "bugs": {
-    "url": "https://github.com/phil/heroku-slugs/issues"
+    "url": "https://github.com/heroku/heroku-slugs/issues"
   },
   "keywords": [
     "heroku-plugin"
