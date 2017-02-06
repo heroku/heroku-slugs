@@ -1,8 +1,9 @@
 'use strict'
+
 exports.topic = {
   name: 'slugs',
   // this is the help text that shows up under `heroku help`
-  description: 'a topic for the hello world plugin'
+  description: 'A Heroku CLI plugin to manage and download slugs'
 }
 
 exports.commands = [
