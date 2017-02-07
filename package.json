@@ -1,6 +1,6 @@
 {
   "name": "heroku-slugs",
-  "version": "1.0.1b1",
+  "version": "1.0.2",
   "description": "Heroku CLI Plugin to manage and download slugs",
   "main": "index.js",
   "author": "Jeff Dickey @dickeyxxx",
