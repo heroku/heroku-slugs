@@ -1,9 +1,9 @@
 exports.topic = {
   name: 'slugs',
-  // this is the help text that shows up under `heroku help`
-  description: 'A Heroku CLI plugin to manage and download slugs'
+  description: 'Lists and downloads application slugs'
 }
 
 exports.commands = [
-  require('./commands/download.js')
+  require('./commands/slugs/download.js'),
+  require('./commands/slugs/index.js')
 ]

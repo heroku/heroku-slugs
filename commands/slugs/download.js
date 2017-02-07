@@ -1,6 +1,6 @@
 let cli      = require('heroku-cli-util')
 let co       = require('co')
-let download = require('../lib/download')
+let download = require('../../lib/download')
 
 function* run (context, heroku) {
   const exec = require('child_process').execSync
