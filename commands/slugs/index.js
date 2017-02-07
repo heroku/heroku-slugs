@@ -14,7 +14,7 @@ function* run (context, heroku) {
 
 module.exports = {
     topic: 'slugs',
-    description: 'list recent slugs on app',
+    description: 'list recent slugs on application',
     needsAuth: true,
     needsApp: true,
     run: cli.command(co.wrap(run))

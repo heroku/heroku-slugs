@@ -1,6 +1,6 @@
 exports.topic = {
   name: 'slugs',
-  description: 'List and download compiled slugs'
+  description: 'Lists and downloads application slugs'
 }
 
 exports.commands = [
