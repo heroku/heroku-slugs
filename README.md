@@ -11,7 +11,8 @@ $ heroku plugins:install heroku-slugs
 ## Commands
 
 ```
-$ heroku slugs:download [SLUG_ID] -a appname
+$ heroku slugs:download [SLUG_ID]
+$ heroku slugs:download -a appname
 ```
 
 This will download the Slug directly from our filestore on S3
