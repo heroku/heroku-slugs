@@ -15,14 +15,14 @@ function* run (context, heroku) {
   }
   let slug = yield heroku.request({path: `/apps/${context.app}/slugs/${id}`})
   exec(`mkdir ${context.app}`)
-  yield download(slug.blob.url, `${context.app}/slug.tar`, {progress: true})
+  yield download(slug.blob.url, `${context.app}/slug.tar.gz`, {progress: true})
   exec(`tar -xf ${context.app}/slug.tar -C ${context.app}`)
 }
 
 module.exports = {
   topic: 'slugs',
   command: 'download',
-  description: 'downloads a slug to slug.dump',
+  description: 'downloads a slug to <APP_NAME>/slug.tar.gz and then extracts it',
   help: 'If SLUG_ID is not specified, returns the current slug.',
   args: [{name: 'slug_id', optional: true}],
   needsApp:  true,
