@@ -5,5 +5,6 @@ exports.topic = {
 
 exports.commands = [
   require('./commands/slugs/download.js'),
+  require('./commands/slugs/url.js'),
   require('./commands/slugs/index.js')
 ]

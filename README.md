@@ -16,3 +16,9 @@ $ heroku slugs:download -a appname
 ```
 
 This will download the Slug directly from our filestore on S3
+
+```
+$ heroku slugs:url -a appname
+```
+
+This will get the url to download the Slug directly from our filestore on S3.
