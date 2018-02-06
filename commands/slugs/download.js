@@ -16,7 +16,7 @@ function* run (context, heroku) {
   let slug = yield heroku.request({path: `/apps/${context.app}/slugs/${id}`})
   exec(`mkdir ${context.app}`)
   yield download(slug.blob.url, `${context.app}/slug.tar.gz`, {progress: true})
-  exec(`tar -xf ${context.app}/slug.tar -C ${context.app}`)
+  exec(`tar -xf ${context.app}/slug.tar.gz -C ${context.app}`)
 }
 
 module.exports = {
