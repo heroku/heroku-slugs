@@ -1,17 +1,11 @@
 {
   "name": "heroku-slugs",
-  "version": "1.0.3",
   "description": "Heroku CLI Plugin to manage and download slugs",
-  "main": "index.js",
+  "version": "1.0.3",
   "author": "Jeff Dickey @dickeyxxx",
-  "repository": "heroku/heroku-slugs",
   "bugs": {
     "url": "https://github.com/heroku/heroku-slugs/issues"
   },
-  "keywords": [
-    "heroku-plugin"
-  ],
-  "license": "ISC",
   "dependencies": {
     "bytes": "2.4.0",
     "co": "4.6.0",
@@ -19,5 +13,16 @@
     "heroku-run": "3.2.14",
     "mkdirp": "0.5.1",
     "smooth-progress": "1.0.4"
-  }
+  },
+  "files": [
+    "/index.js",
+    "/commands",
+    "/lib"
+  ],
+  "keywords": [
+    "heroku-plugin"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": "heroku/heroku-slugs"
 }
