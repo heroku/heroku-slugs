@@ -11,6 +11,13 @@ $ heroku plugins:install heroku-slugs
 ## Commands
 
 ```
+$ heroku slugs -a appname
+Slugs in appname
+v24: 00000000-bbbb-cccc-dddd-eeeeeeeeeeee
+v23: 11111111-bbbb-cccc-dddd-eeeeeeeeeeee
+v22: 22222222-bbbb-cccc-dddd-eeeeeeeeeeee
+v21: 33333333-bbbb-cccc-dddd-eeeeeeeeeeee
+
 $ heroku slugs:download [SLUG_ID]
 $ heroku slugs:download -a appname
 ```
