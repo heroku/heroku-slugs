@@ -18,8 +18,7 @@ v23: 11111111-bbbb-cccc-dddd-eeeeeeeeeeee
 v22: 22222222-bbbb-cccc-dddd-eeeeeeeeeeee
 v21: 33333333-bbbb-cccc-dddd-eeeeeeeeeeee
 
-$ heroku slugs:download [SLUG_ID]
-$ heroku slugs:download -a appname
+$ heroku slugs:download 00000000-bbbb-cccc-dddd-eeeeeeeeeeee -a appname
 ```
 
 This will download the Slug directly from our filestore on S3
