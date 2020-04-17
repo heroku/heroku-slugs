@@ -22,3 +22,11 @@ $ heroku slugs:download 00000000-bbbb-cccc-dddd-eeeeeeeeeeee -a appname
 ```
 
 This will download the Slug directly from our filestore on S3
+
+## Using a proxy
+
+```
+$ export HEROKU_HTTP_PROXY_HOST=<your-proxy-host>
+$ export HEROKU_HTTP_PROXY_PORT=<your-proxy-port>
+$ heroku slugs:download 00000000-bbbb-cccc-dddd-eeeeeeeeeeee -a appname
+```
