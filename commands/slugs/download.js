@@ -1,4 +1,5 @@
 let cli      = require('heroku-cli-util')
+let flags    = require('cli-engine-heroku').flags;
 let co       = require('co')
 let download = require('../../lib/download')
 
@@ -16,7 +17,9 @@ function* run (context, heroku) {
   let slug = yield heroku.request({path: `/apps/${context.app}/slugs/${id}`})
   exec(`mkdir ${context.app}`)
   yield download(slug.blob.url, `${context.app}/slug.tar.gz`, {progress: true})
-  exec(`tar -xf ${context.app}/slug.tar.gz -C ${context.app}`)
+  if (!context.flags['no-extract']) {
+    exec(`tar -xf ${context.app}/slug.tar.gz -C ${context.app}`)
+  }
 }
 
 module.exports = {
@@ -25,6 +28,9 @@ module.exports = {
   description: 'downloads a slug to <APP_NAME>/slug.tar.gz and then extracts it',
   help: 'If SLUG_ID is not specified, returns the current slug.',
   args: [{name: 'slug_id', optional: true}],
+  flags: {
+    'no-extract': flags.boolean({description: 'Do not extract slug after download'})
+  },
   needsApp:  true,
   needsAuth: true,
   run: cli.command(co.wrap(run))
