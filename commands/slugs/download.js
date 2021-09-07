@@ -14,8 +14,12 @@ function* run (context, heroku) {
     id = releases.filter((r) => r.slug)[0].slug.id
   }
   let slug = yield heroku.request({path: `/apps/${context.app}/slugs/${id}`})
+
+  cli.log(`Donwloading slug ${slug.version}: ${id} from ${context.app}`)
   exec(`mkdir ${context.app}`)
   yield download(slug.blob.url, `${context.app}/slug.tar.gz`, {progress: true})
+
+  cli.log('Extracting downloaded slug')
   exec(`tar -xf ${context.app}/slug.tar.gz -C ${context.app}`)
 }
 
