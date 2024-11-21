@@ -1,4 +1,4 @@
-# Heroku Slugs CLI Plugin
+# Heroku Slugs CLI Plugin test
 
 This plugin adds commands to the Heroku CLI for downloading slugs
 
