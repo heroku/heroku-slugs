@@ -1,8 +1,8 @@
 {
-  "name": "heroku-slugs",
+  "name": "@heroku-cli/heroku-slugs",
   "description": "Heroku CLI Plugin to manage and download slugs",
   "version": "1.1.0",
-  "author": "Jeff Dickey @dickeyxxx",
+  "author": "Heroku",
   "bugs": {
     "url": "https://github.com/heroku/heroku-slugs/issues"
   },
