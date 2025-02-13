@@ -7,22 +7,63 @@
     "url": "https://github.com/heroku/heroku-slugs/issues"
   },
   "dependencies": {
-    "bytes": "2.4.0",
-    "co": "4.6.0",
-    "heroku-cli-util": "5.7.3",
-    "heroku-run": "3.2.14",
-    "mkdirp": "0.5.1",
-    "smooth-progress": "1.0.4"
+    "@heroku-cli/command": "^11.4.0",
+    "@oclif/core": "^2.16.0",
+    "bytes": "^3.1.2",
+    "fs-extra": "^11.3.0",
+    "got": "^11.8.6",
+    "smooth-progress": "^1.1.0"
+  },
+  "devDependencies": {
+    "@heroku-cli/schema": "^2.0.0",
+    "@types/bytes": "^3.1.4",
+    "@types/chai": "^4",
+    "@types/fs-extra": "^11.0.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.14.8",
+    "chai": "^4.4.1",
+    "eslint": "^8.57.0",
+    "eslint-config-oclif": "^5.2.2",
+    "eslint-config-oclif-typescript": "^3.1.14",
+    "eslint-plugin-mocha": "^10.5.0",
+    "mocha": "^11.1.0",
+    "nyc": "^17.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">= 20"
   },
   "files": [
-    "/index.js",
-    "/commands",
-    "/lib"
+    "/dist",
+    "/oclif.manifest.json"
   ],
   "keywords": [
-    "heroku-plugin"
+    "heroku-plugin",
+    "oclif"
   ],
   "license": "ISC",
-  "main": "index.js",
-  "repository": "heroku/heroku-slugs"
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "oclif": {
+    "commands": "./dist/commands",
+    "bin": "heroku",
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ],
+    "topics": {
+      "slugs": {
+        "description": "manage and download slugs"
+      }
+    }
+  },
+  "repository": "heroku/heroku-slugs",
+  "scripts": {
+    "build": "rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  }
 }
