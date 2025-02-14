@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "oclif",
+    "oclif-typescript",
+    "plugin:mocha/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "camelcase":"off",
+    "import/namespace": "warn",
+    "indent": ["error", 2, {"MemberExpression": 1}],
+    "mocha/no-mocha-arrows": "warn",
+    "node/no-missing-import": "off",
+    "n/shebang": "warn",
+    "perfectionist/sort-objects": "warn",
+    "prefer-arrow-callback": "off",
+    "unicorn/no-array-for-each": "off",
+    "unicorn/no-useless-undefined": "warn",
+    "unicorn/prefer-node-protocol": "warn",
+    "unicorn/prefer-number-properties": "warn",
+    "unicorn/prefer-string-replace-all": "warn"
+  }
+}
