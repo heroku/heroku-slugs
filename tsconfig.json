@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "module": "commonjs",
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "./dist",
+    "pretty": true,
+    "rootDirs": [
+      "./src"
+    ],
+    "skipLibCheck": true,
     "strict": true,
-    "target": "es2019",
-    "esModuleInterop": true
+    "target": "es2017",
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
   },
   "include": [
-    "src/**/*"
+    "./src/**/*"
   ]
 }

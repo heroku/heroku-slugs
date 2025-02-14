@@ -1,3 +1,4 @@
+import color from '@heroku-cli/color'
 import {Command, flags} from '@heroku-cli/command'
 import * as Heroku from '@heroku-cli/schema'
 import {ux} from '@oclif/core'
@@ -22,6 +23,7 @@ export default class SlugsIndex extends Command {
         Range: 'version ..; order=desc',
       },
     })
+    ux.styledHeader(`${color.app(app)} slugs`)
     for (const r of releases.filter(r => r.slug)) ux.log(`v${r.version}: ${r.slug?.id}`)
   }
 }
