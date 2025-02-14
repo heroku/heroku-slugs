@@ -32,6 +32,7 @@
     "nock": "^14.0.0",
     "nyc": "^17.1.0",
     "stdout-stderr": "0.1.13",
+    "strip-ansi": "^6.0.1",
     "ts-node": "^10.9.1",
     "tsheredoc": "^1.0.1",
     "typescript": "^5.7.3"

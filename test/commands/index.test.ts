@@ -1,3 +1,4 @@
+import color from '@heroku-cli/color'
 import * as Heroku from '@heroku-cli/schema'
 import * as nock from 'nock'
 import {stdout} from 'stdout-stderr'
@@ -6,6 +7,8 @@ import heredoc from 'tsheredoc'
 import Cmd from '../../src/commands/slugs/index'
 import expectOutput from '../helpers/expect-output'
 import runCommand from '../helpers/run-command'
+
+import stripAnsi = require('strip-ansi')
 
 describe('slugs:index', function () {
   const app = {
@@ -44,7 +47,7 @@ describe('slugs:index', function () {
       app.name,
     ])
     expectOutput(stdout.output, heredoc(`
-      === ⬢ my-app slugs
+      === ${stripAnsi(color.app(app.name))} slugs
 
       v1: slug1
       v2: slug2
