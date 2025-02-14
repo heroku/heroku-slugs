@@ -30,6 +30,7 @@
     "eslint-plugin-mocha": "^10.5.0",
     "mocha": "^11.1.0",
     "nock": "^14.0.0",
+    "oclif": "4.14.36",
     "nyc": "^17.1.0",
     "stdout-stderr": "0.1.13",
     "strip-ansi": "^6.0.1",
