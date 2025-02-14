@@ -1,10 +1,10 @@
 import * as Heroku from '@heroku-cli/schema'
-import {expect} from 'chai'
 import * as nock from 'nock'
 import {stdout} from 'stdout-stderr'
 import heredoc from 'tsheredoc'
 
 import Cmd from '../../src/commands/slugs/index'
+import expectOutput from '../helpers/expect-output'
 import runCommand from '../helpers/run-command'
 
 describe('slugs:index', function () {
@@ -43,7 +43,7 @@ describe('slugs:index', function () {
       '--app',
       app.name,
     ])
-    expect(stdout.output).to.equal(heredoc(`
+    expectOutput(stdout.output, heredoc(`
       === ⬢ my-app slugs
 
       v1: slug1

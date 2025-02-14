@@ -17,6 +17,7 @@
     "unicorn/no-array-for-each": "off",
     "unicorn/no-useless-undefined": "warn",
     "unicorn/prefer-node-protocol": "warn",
-    "unicorn/prefer-number-properties": "warn"
+    "unicorn/prefer-number-properties": "warn",
+    "unicorn/prefer-string-replace-all": "warn"
   }
 }
