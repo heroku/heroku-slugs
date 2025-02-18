@@ -39,7 +39,7 @@ export default class SlugsDownload extends Command {
     }
 
     if (!id) {
-      ux.error('No slug found. Please specify which slug to download.')
+      ux.error('No slug found. Specify the slug to download by its name or ID.')
     }
 
     const {body: appSlug} = await this.heroku.get<Heroku.Slug>(`/apps/${app}/slugs/${id}`)
