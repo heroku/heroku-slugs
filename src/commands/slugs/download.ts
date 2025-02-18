@@ -44,7 +44,7 @@ export default class SlugsDownload extends Command {
 
     const {body: appSlug} = await this.heroku.get<Heroku.Slug>(`/apps/${app}/slugs/${id}`)
     if (!appSlug.blob || !appSlug.blob.url) {
-      this.error('This slug has no blob to download')
+      this.error('This slug has no blob to download.')
     }
 
     execSync(`mkdir ${app}`)
