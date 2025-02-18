@@ -7,7 +7,7 @@ import {download} from '../../lib/download'
 
 export default class SlugsDownload extends Command {
   static args = {
-    slug: Args.string({description: 'slug ID or name of slug'}),
+    slug: Args.string({description: 'name or ID of slug'}),
   }
 
   static description = 'downloads a slug to <APP_NAME>/slug.tar.gz and then extracts it'
