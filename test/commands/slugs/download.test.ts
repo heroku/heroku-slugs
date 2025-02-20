@@ -1,8 +1,9 @@
 import {expect} from 'chai'
+import * as fs from 'fs-extra'
 import * as nock from 'nock'
 import * as childProcess from 'node:child_process'
 import {stderr, stdout} from 'stdout-stderr'
-import * as fs from 'fs-extra'
+
 import Cmd from '../../../src/commands/slugs/download'
 import runCommand from '../../helpers/run-command'
 
