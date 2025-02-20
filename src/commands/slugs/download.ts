@@ -47,8 +47,12 @@ export default class SlugsDownload extends Command {
       this.error('This slug has no blob to download.')
     }
 
+    ux.log(`Downloading slug ${id} to ${app}/slug.tar.gz`)
     execSync(`mkdir ${app}`)
     await download(appSlug.blob.url, `${app}/slug.tar.gz`, {progress: true})
+
+    ux.action.start(`Extracting ${app}/slug.tar.gz`)
     execSync(`tar -xf ${app}/slug.tar.gz -C ${app}`)
+    ux.action.stop()
   }
 }
