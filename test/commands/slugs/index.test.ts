@@ -4,9 +4,9 @@ import * as nock from 'nock'
 import {stdout} from 'stdout-stderr'
 import heredoc from 'tsheredoc'
 
-import Cmd from '../../src/commands/slugs/index'
-import expectOutput from '../helpers/expect-output'
-import runCommand from '../helpers/run-command'
+import Cmd from '../../../src/commands/slugs/index'
+import expectOutput from '../../helpers/expect-output'
+import runCommand from '../../helpers/run-command'
 
 import stripAnsi = require('strip-ansi')
 

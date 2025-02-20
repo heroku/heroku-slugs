@@ -1,5 +1,7 @@
 import * as https from 'https'
 import * as fs from 'node:fs'
+import * as Path from 'node:path'
+
 const progress = require('smooth-progress')
 const bytes = require('bytes')
 // eslint-disable-next-line n/no-extraneous-require
@@ -7,6 +9,7 @@ const tunnel = require('tunnel-agent')
 
 export function download(url: string, path: string, opts: { progress: any }) {
   return new Promise((fulfill, reject) => {
+    fs.mkdirSync(Path.dirname(path), {recursive: true})
     const file = fs.createWriteStream(path)
     const agent = makeAgent()
 
