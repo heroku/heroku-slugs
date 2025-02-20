@@ -2,7 +2,7 @@ import {expect} from 'chai'
 import * as nock from 'nock'
 import * as childProcess from 'node:child_process'
 import {stderr, stdout} from 'stdout-stderr'
-
+import * as fs from 'fs-extra'
 import Cmd from '../../../src/commands/slugs/download'
 import runCommand from '../../helpers/run-command'
 
@@ -12,13 +12,13 @@ describe('slugs:download', function () {
   let extractTarStub: sinon.SinonStub
 
   beforeEach(function () {
-    // Clear any existing nock interceptors
     nock.cleanAll()
     extractTarStub = sinon.stub(childProcess, 'execSync')
   })
 
   afterEach(async function () {
     extractTarStub.restore()
+    fs.remove('myapp')
   })
 
   it('downloads a slug', async function () {
@@ -45,7 +45,6 @@ describe('slugs:download', function () {
 
     expect(extractTarStub.withArgs('mkdir myapp').calledOnce).to.eq(true)
     expect(extractTarStub.withArgs('tar -xf myapp/slug.tar.gz -C myapp').calledOnce).to.eq(true)
-
     expect(stdout.output).to.include('Downloading slug slug-id to myapp/slug.tar.gz')
     expect(stderr.output).to.include('Extracting myapp/slug.tar.gz... done')
   })
