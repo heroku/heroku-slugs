@@ -74,24 +74,27 @@ _See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/
 
 ## `heroku slugs:download [SLUG]`
 
-downloads a slug to <APP_NAME>/slug.tar.gz and then extracts it
+download a slug to <APP_NAME>/slug.tar.gz and extracts it
 
 ```
 USAGE
-  $ heroku slugs:download [SLUG] -a <value> [-r <value>]
+  $ heroku slugs:download [SLUG] -a <value> [-e] [-r <value>]
 
 ARGUMENTS
-  SLUG  slug ID or name of slug
+  SLUG  name or ID of slug
 
 FLAGS
-  -a, --app=<value>     (required) app to run command against
-  -r, --remote=<value>  git remote of app to use
+  -a, --app=<value>      (required) app to run command against
+  -e, --no-extract-slug  skip extracting slug after download
+  -r, --remote=<value>   git remote of app to use
 
 DESCRIPTION
-  downloads a slug to <APP_NAME>/slug.tar.gz and then extracts it
+  download a slug to <APP_NAME>/slug.tar.gz and extracts it
 
 EXAMPLES
-  $ heroku slugs:download --app myapp v2
+  $ heroku slugs:download --app example-app v2
+
+  $ heroku slugs:download --app example-app v2 --no-extract-slug
 ```
 
 _See code: [src/commands/slugs/download.ts](https://github.com/heroku/heroku-slugs/blob/v1.1.0/src/commands/slugs/download.ts)_
