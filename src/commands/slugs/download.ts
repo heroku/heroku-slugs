@@ -10,7 +10,7 @@ export default class SlugsDownload extends Command {
     slug: Args.string({description: 'name or ID of slug'}),
   }
 
-  static description = 'download a slug to <APP_NAME>/slug.tar.gz and then extracts it'
+  static description = "download a slug's tarball to <APP_NAME>/slug.tar.gz and then extract the slug"
 
   static examples = [
     '$ heroku slugs:download --app example-app v2',

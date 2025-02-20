@@ -74,7 +74,7 @@ _See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/
 
 ## `heroku slugs:download [SLUG]`
 
-download a slug to <APP_NAME>/slug.tar.gz and extracts it
+download a slug's tarball to <APP_NAME>/slug.tar.gz and then extract the slug
 
 ```
 USAGE
@@ -89,7 +89,7 @@ FLAGS
   -r, --remote=<value>   git remote of app to use
 
 DESCRIPTION
-  download a slug to <APP_NAME>/slug.tar.gz and extracts it
+  download a slug's tarball to <APP_NAME>/slug.tar.gz and then extract the slug
 
 EXAMPLES
   $ heroku slugs:download --app example-app v2
