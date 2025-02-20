@@ -47,7 +47,7 @@ describe('slugs:index', function () {
       app.name,
     ])
     expectOutput(stdout.output, heredoc(`
-      === ${stripAnsi(color.app(app.name))} slugs
+      === ${stripAnsi(color.app(app.name))} Slugs
 
       v1: slug1
       v2: slug2

@@ -23,7 +23,7 @@ export default class SlugsIndex extends Command {
         Range: 'version ..; order=desc',
       },
     })
-    ux.styledHeader(`${color.app(app)} slugs`)
+    ux.styledHeader(`${color.app(app)} Slugs`)
     for (const r of releases.filter(r => r.slug)) ux.log(`v${r.version}: ${r.slug?.id}`)
   }
 }
