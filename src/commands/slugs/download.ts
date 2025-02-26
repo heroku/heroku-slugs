@@ -1,4 +1,5 @@
 import {Command, flags} from '@heroku-cli/command'
+import {Notification, notify} from '@heroku-cli/notifications'
 import * as Heroku from '@heroku-cli/schema'
 import {Args, ux} from '@oclif/core'
 import {execSync} from 'node:child_process'
@@ -51,6 +52,7 @@ export default class SlugsDownload extends Command {
     }
 
     ux.log(`Downloading slug ${id} to ${app}/slug.tar.gz`)
+    const downloadStarted = Date.now()
     execSync(`mkdir ${app}`)
     await download(appSlug.blob.url, `${app}/slug.tar.gz`, {progress: true})
 
@@ -58,6 +60,16 @@ export default class SlugsDownload extends Command {
       ux.action.start(`Extracting ${app}/slug.tar.gz`)
       execSync(`tar -xf ${app}/slug.tar.gz -C ${app}`)
       ux.action.stop()
+    }
+
+    const downloadTime = Date.now() - downloadStarted
+    if (downloadTime > 10 * 1000) {
+      const notification: { subtitle?: string } & Notification = {
+        message: 'download is finished',
+        subtitle: 'heroku slugs:download',
+        title: app,
+      }
+      notify(notification)
     }
   }
 }
