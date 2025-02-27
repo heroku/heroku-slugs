@@ -34,14 +34,9 @@ $ heroku slugs:download 00000000-bbbb-cccc-dddd-eeeeeeeeeeee -a appname
 # Usage
   <!-- usage -->
 ```sh-session
-$ npm install -g @heroku-cli/heroku-slugs
+$ heroku plugins:install @heroku-cli/heroku-slugs
 $ heroku COMMAND
 running command...
-$ heroku (--version)
-@heroku-cli/heroku-slugs/2.0.0 darwin-x64 node-v20.18.3
-$ heroku --help [COMMAND]
-USAGE
-  $ heroku COMMAND
 ...
 ```
 <!-- usagestop -->
