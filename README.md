@@ -34,14 +34,9 @@ $ heroku slugs:download 00000000-bbbb-cccc-dddd-eeeeeeeeeeee -a appname
 # Usage
   <!-- usage -->
 ```sh-session
-$ npm install -g @heroku-cli/heroku-slugs
+$ heroku plugins:install @heroku-cli/heroku-slugs
 $ heroku COMMAND
 running command...
-$ heroku (--version)
-@heroku-cli/heroku-slugs/1.1.0 darwin-x64 node-v20.18.3
-$ heroku --help [COMMAND]
-USAGE
-  $ heroku COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -70,7 +65,7 @@ EXAMPLES
   $ heroku slugs --app myapp
 ```
 
-_See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/blob/v1.1.0/src/commands/slugs/index.ts)_
+_See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/blob/v2.0.0/src/commands/slugs/index.ts)_
 
 ## `heroku slugs:download [SLUG]`
 
@@ -97,5 +92,5 @@ EXAMPLES
   $ heroku slugs:download --app example-app v2 --no-extract-slug
 ```
 
-_See code: [src/commands/slugs/download.ts](https://github.com/heroku/heroku-slugs/blob/v1.1.0/src/commands/slugs/download.ts)_
+_See code: [src/commands/slugs/download.ts](https://github.com/heroku/heroku-slugs/blob/v2.0.0/src/commands/slugs/download.ts)_
 <!-- commandsstop -->

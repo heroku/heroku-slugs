@@ -1,7 +1,7 @@
 {
   "name": "@heroku-cli/heroku-slugs",
   "description": "Heroku CLI Plugin to manage and download slugs",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "author": "Heroku",
   "bugs": {
     "url": "https://github.com/heroku/heroku-slugs/issues"
@@ -32,8 +32,8 @@
     "eslint-plugin-mocha": "^10.5.0",
     "mocha": "^11.1.0",
     "nock": "^14.0.0",
-    "oclif": "4.14.36",
     "nyc": "^17.1.0",
+    "oclif": "4.14.36",
     "sinon": "^19.0.2",
     "stdout-stderr": "0.1.13",
     "strip-ansi": "^6.0.1",
