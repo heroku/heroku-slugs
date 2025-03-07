@@ -20,7 +20,7 @@ export default class SlugsDownload extends Command {
 
   static flags = {
     app: flags.app({required: true}),
-    'no-extract-slug': flags.boolean({char: 'e', default: false, description: 'skip extracting slug after download'}),
+    'no-extract-slug': flags.boolean({char: 'e', default: false, description: "don't extract slug after download"}),
     remote: flags.remote(),
   }
 
