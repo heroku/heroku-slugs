@@ -844,10 +844,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
-"@heroku-cli/color@2.0.4", "@heroku-cli/color@^2.0.1":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/color/-/color-2.0.4.tgz#fc13dcc5cb372d202ba52cd27df4c7edc8d0b08b"
-  integrity sha512-CjG4Mlj8B5ZELk8mzgJLUEb1fH+zckrqtufgxeKG9jLMyUCRyHNhEEBT9XHadPE6HbKTXMzW941QsmK6qVgNng==
+"@heroku-cli/color@2.0.5", "@heroku-cli/color@^2.0.1":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/color/-/color-2.0.5.tgz#b10bec4640ea55562f645add8ba9ba2d8252b01d"
+  integrity sha512-zvlWxa+GTZlGLtUgeVQyiH5ynqz7Lh0GEJJwcsUMSVGCgcaIdm2KsltRN3GsEcsMqRuaFBVFHHToKoozIFqvnQ==
   dependencies:
     ansi-styles "^4.3.0"
     chalk "^4.1.2"
@@ -882,9 +882,9 @@
     ts-node "^10.9.2"
 
 "@heroku-cli/schema@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/schema/-/schema-2.0.0.tgz#917544991d2d9ffaeb4e3df4f7efb973ffe6f245"
-  integrity sha512-ldrwW9VnoAzxjkUYq5qgnsTPi6w6EKIWdAbdTDugRhsYggleHfn0lXJhHOm0gBMy7vB6EwFEivTLVnD675LF8Q==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/schema/-/schema-2.0.1.tgz#662bb833eb971ee747ad3c7ae2bdcb2a6c499040"
+  integrity sha512-jMyx9gifqfYoqveP0bKSDIHHd37ni3ngaVXe8Acozd7httC9w1iF6pJxrR3lGfU8eJHT5/mbXLYzTtjQoZrDCw==
 
 "@heroku/http-call@^5.4.0":
   version "5.4.0"
@@ -3763,9 +3763,9 @@ fromentries@^1.2.0:
   integrity sha512-cHEpEQHUg0f8XdtZCc2ZAhrHzKzT0MrFUTcvx+hfxYu7rGMDc5SKoXFh+n4YigxsHXRzc6OrCshdR1bWH6HHyg==
 
 fs-extra@^11.3.0:
-  version "11.3.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.3.0.tgz#0daced136bbaf65a555a326719af931adc7a314d"
-  integrity sha512-Z4XaCL6dUDHfP/jT25jJKMmtxvuwbkrD1vNSMFlo9lNLY2c5FHYSQgHPRZUjAB26TpDEoW9HCOgplrdbaPV/ew==
+  version "11.3.3"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.3.3.tgz#a27da23b72524e81ac6c3815cc0179b8c74c59ee"
+  integrity sha512-VWSRii4t0AFm6ixFFmLLx1t7wS1gh+ckoa84aOeapGum0h+EZd1EhEumSB+ZdDLnEPuucsVB9oB7cxJHap6Afg==
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
