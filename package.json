@@ -7,7 +7,7 @@
     "url": "https://github.com/heroku/heroku-slugs/issues"
   },
   "dependencies": {
-    "@heroku-cli/color": "2.0.4",
+    "@heroku-cli/color": "2.0.5",
     "@heroku-cli/command": "^11.5.0",
     "@heroku-cli/notifications": "1.2.5",
     "@oclif/core": "^2.16.0",
