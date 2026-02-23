@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v2.0.1...heroku-slugs-v2.0.2) (2026-02-23)
+
+
+### Bug Fixes
+
+* **deps:** bump the patch-dependencies group across 1 directory with 4 updates ([#63](https://github.com/heroku/heroku-slugs/issues/63)) ([2bcd489](https://github.com/heroku/heroku-slugs/commit/2bcd4896175059f5d07d63a768fc19ff127bbc6b))
+
 ## [2.0.1](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v2.0.0...heroku-slugs-v2.0.1) (2026-01-29)
 
 
