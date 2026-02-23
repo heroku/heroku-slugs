@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@heroku-cli/color": "2.0.5",
-    "@heroku-cli/command": "^11.5.0",
+    "@heroku-cli/command": "^12.1.2",
     "@heroku-cli/notifications": "1.2.6",
     "@oclif/core": "^2.16.0",
     "bytes": "^3.1.2",
