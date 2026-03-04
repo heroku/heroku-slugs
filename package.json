@@ -26,14 +26,13 @@
     "@types/sinon": "^17.0.4",
     "@types/supports-color": "^8.1.3",
     "chai": "^4.4.1",
-    "eslint": "^8.57.0",
-    "eslint-config-oclif": "^5.2.2",
-    "eslint-config-oclif-typescript": "^3.1.14",
-    "eslint-plugin-mocha": "^10.5.0",
-    "mocha": "^11.1.0",
+    "eslint": "^9",
+    "eslint-config-oclif": "^6.0.144",
+    "eslint-plugin-mocha": "^11.2.0",
+    "mocha": "^11",
     "nock": "^14.0.0",
     "nyc": "^17.1.0",
-    "oclif": "4.22.73",
+    "oclif": "4.22.81",
     "sinon": "^19.0.2",
     "stdout-stderr": "0.1.13",
     "strip-ansi": "^6.0.1",
@@ -77,10 +76,14 @@
   "repository": "heroku/heroku-slugs",
   "scripts": {
     "build": "rm -rf dist && tsc -b",
-    "lint": "eslint . --ext .ts --config .eslintrc",
+    "lint": "eslint .",
     "postpack": "rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
     "prepack": "yarn build && oclif manifest && oclif readme",
     "test": "nyc mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
+  },
+  "resolutions": {
+    "serialize-javascript": "^7.0.3"
   }
 }
