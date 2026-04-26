@@ -3488,9 +3488,9 @@ eslint-config-oclif@^5.2.2:
     eslint-plugin-unicorn "^48.0.1"
 
 eslint-config-oclif@^6.0.144:
-  version "6.0.159"
-  resolved "https://registry.npmjs.org/eslint-config-oclif/-/eslint-config-oclif-6.0.159.tgz"
-  integrity sha512-tzfcFO1kYLJeuSgM4QOVW/GJROeAcd5Nwzx5dwonK4FECoKAArjZQ5ZY7Z+uK/nAABIym5ihxWgdkSrgqbJARg==
+  version "6.0.160"
+  resolved "https://registry.yarnpkg.com/eslint-config-oclif/-/eslint-config-oclif-6.0.160.tgz#d2b5fba7cb7947e52313114cde2ab14f6f53dbf7"
+  integrity sha512-ObWYOTSLk60UdQkJNTDzh7vVQpPtysz8O4Wwf6Ui7+DJErVjCdaYB0F5qAaOoUr2Jq3hnukO0Hh0PY6rAfG9yw==
   dependencies:
     "@eslint/compat" "^1.4.1"
     "@eslint/eslintrc" "^3.3.5"
@@ -3508,7 +3508,7 @@ eslint-config-oclif@^6.0.144:
     eslint-plugin-n "^17.24.0"
     eslint-plugin-perfectionist "^4"
     eslint-plugin-unicorn "^56.0.1"
-    typescript-eslint "^8.58.2"
+    typescript-eslint "^8.59.0"
 
 eslint-config-xo-space@^0.35.0:
   version "0.35.0"
@@ -5223,9 +5223,9 @@ no-case@^3.0.4:
     tslib "^2.0.3"
 
 nock@^14.0.0:
-  version "14.0.12"
-  resolved "https://registry.npmjs.org/nock/-/nock-14.0.12.tgz"
-  integrity sha512-kZM3bHV0KzhHH6E2eRszHyML/w87AUzLBwupNTHohtYWP9fZYgUPmCbSKq6ITfEEmHqN4/p0MscvUipT4P5Qsg==
+  version "14.0.13"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-14.0.13.tgz#3c1f3e525d49d3cdedcbed6ce49008bad5953ebb"
+  integrity sha512-SCPsQmGVNY8h1rfS3aU0MzOGYY+wKIFukHEsoSIwPRCYocZkya7MFIlWIEYPWQZj+Gaksg6EyUaY255ZDqpQuA==
   dependencies:
     "@mswjs/interceptors" "^0.41.0"
     json-stringify-safe "^5.0.1"
@@ -6531,9 +6531,9 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript-eslint@^8.58.2:
+typescript-eslint@^8.59.0:
   version "8.59.0"
-  resolved "https://registry.npmjs.org/typescript-eslint/-/typescript-eslint-8.59.0.tgz"
+  resolved "https://registry.yarnpkg.com/typescript-eslint/-/typescript-eslint-8.59.0.tgz#d1cc7c63559ce7116aeb66d35ec9dbe0063379fd"
   integrity sha512-BU3ONW9X+v90EcCH9ZS6LMackcVtxRLlI3XrYyqZIwVSHIk7Qf7bFw1z0M9Q0IUxhTMZCf8piY9hTYaNEIASrw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "8.59.0"
