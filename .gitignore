@@ -3,3 +3,4 @@ node_modules
 oclif.manifest.json
 /dist
 .nyc_output
+/coverage

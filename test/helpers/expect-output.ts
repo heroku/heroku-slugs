@@ -1,4 +1,4 @@
-import {expect} from 'chai'
+import {expect} from 'vitest'
 
 function stripIndents(str: string) {
   str = str.trim().replace(/\s+$/gm, '')
@@ -9,10 +9,7 @@ function stripIndents(str: string) {
 }
 
 const expectOutput = function (actual: string, expected: string) {
-  // it can be helpful to strip all hyphens & spaces when migrating tests before perfecting
-  // use `.replace(/[\s─]/g, '')` on both actual & expected until tests pass, then remove, and paste actual into expected
-  return expect(actual.trim().replace(/\s+$/gm, ''))
-    .to.equal(stripIndents(expected))
+  return expect(actual.trim().replace(/\s+$/gm, '')).toBe(stripIndents(expected))
 }
 
 export default expectOutput

@@ -1,0 +1,8 @@
+{
+  "name": "@heroku-cli/heroku-slugs-test",
+  "version": "0.0.0",
+  "files": [],
+  "oclif": {
+    "bin": "heroku"
+  }
+}
