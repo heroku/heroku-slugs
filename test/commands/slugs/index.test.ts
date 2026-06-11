@@ -1,16 +1,16 @@
 import color from '@heroku-cli/color'
-import * as Heroku from '@heroku-cli/schema'
-import * as nock from 'nock'
+import type * as Heroku from '@heroku-cli/schema'
+import nock from 'nock'
 import {stdout} from 'stdout-stderr'
+import stripAnsi from 'strip-ansi'
 import heredoc from 'tsheredoc'
+import {afterEach, describe, it} from 'vitest'
 
 import Cmd from '../../../src/commands/slugs/index'
 import expectOutput from '../../helpers/expect-output'
 import runCommand from '../../helpers/run-command'
 
-import stripAnsi = require('strip-ansi')
-
-describe('slugs:index', function () {
+describe('slugs:index', () => {
   const app = {
     id: 'my-app-id',
     name: 'my-app',
@@ -33,11 +33,11 @@ describe('slugs:index', function () {
     },
   ]
 
-  afterEach(function () {
+  afterEach(() => {
     nock.cleanAll()
   })
 
-  it('returns slugs', async function () {
+  it('returns slugs', async () => {
     nock('https://api.heroku.com')
       .get(`/apps/${app.name}/releases`)
       .reply(200, releases)

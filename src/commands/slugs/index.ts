@@ -1,6 +1,6 @@
 import color from '@heroku-cli/color'
 import {Command, flags} from '@heroku-cli/command'
-import * as Heroku from '@heroku-cli/schema'
+import type * as Heroku from '@heroku-cli/schema'
 import {ux} from '@oclif/core'
 
 export default class SlugsIndex extends Command {

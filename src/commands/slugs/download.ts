@@ -1,6 +1,6 @@
 import {Command, flags} from '@heroku-cli/command'
 import {Notification, notify} from '@heroku-cli/notifications'
-import * as Heroku from '@heroku-cli/schema'
+import type * as Heroku from '@heroku-cli/schema'
 import {Args, ux} from '@oclif/core'
 import {execSync} from 'node:child_process'
 

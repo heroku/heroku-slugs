@@ -32,7 +32,6 @@ export default [
       '@typescript-eslint/no-require-imports': 'warn',
       camelcase: 'off',
       'import/namespace': 'warn',
-      'mocha/no-mocha-arrows': 'warn',
       'n/shebang': 'warn',
       'node/no-missing-import': 'off',
       'perfectionist/sort-imports': 'warn',
