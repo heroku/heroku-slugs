@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.3](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v2.0.2...heroku-slugs-v2.0.3) (2026-06-11)
+
+
+### Dependencies
+
+* bump fast-xml-builder from 1.1.5 to 1.2.0 ([#88](https://github.com/heroku/heroku-slugs/issues/88)) ([160e9ed](https://github.com/heroku/heroku-slugs/commit/160e9ed7059d61ef6f589137f5f3e5360563da1e))
+
+
+### Code Refactoring
+
+* migrate from yarn to npm and mocha to vitest ([#91](https://github.com/heroku/heroku-slugs/issues/91)) ([b3e71cc](https://github.com/heroku/heroku-slugs/commit/b3e71cc9dcce052a931672c72ed56759878dc42b))
+
 ## [2.0.2](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v2.0.1...heroku-slugs-v2.0.2) (2026-04-22)
 
 
