@@ -39,8 +39,8 @@ vi.mock('@heroku-cli/notifications', async importOriginal => {
   }
 })
 
-const Cmd = (await import('../../../src/commands/slugs/download')).default
-const {default: runCommand} = await import('../../helpers/run-command')
+const Cmd = (await import('../../../src/commands/slugs/download.js')).default
+const {default: runCommand} = await import('../../helpers/run-command.js')
 
 describe('slugs:download', () => {
   beforeEach(() => {

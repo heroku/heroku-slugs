@@ -4,12 +4,14 @@ import * as color from '@heroku/heroku-cli-util/color'
 import nock from 'nock'
 import {stdout} from 'stdout-stderr'
 import stripAnsi from 'strip-ansi'
-import heredoc from 'tsheredoc'
+import tsheredoc from 'tsheredoc'
 import {afterEach, describe, it} from 'vitest'
 
-import Cmd from '../../../src/commands/slugs/index'
-import expectOutput from '../../helpers/expect-output'
-import runCommand from '../../helpers/run-command'
+import Cmd from '../../../src/commands/slugs/index.js'
+import expectOutput from '../../helpers/expect-output.js'
+import runCommand from '../../helpers/run-command.js'
+
+const heredoc = tsheredoc.default
 
 describe('slugs:index', () => {
   const app = {
