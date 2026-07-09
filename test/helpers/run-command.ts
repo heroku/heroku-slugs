@@ -23,15 +23,15 @@ const runCommand = async (Cmd: GenericCmd, args: string[] = [], printStd = false
   stderr.start()
 
   return instance
-    .run()
-    .then(args => {
-      stopMock()
-      return args
-    })
-    .catch((error: Error) => {
-      stopMock()
-      throw error
-    })
+  .run()
+  .then(args => {
+    stopMock()
+    return args
+  })
+  .catch((error: Error) => {
+    stopMock()
+    throw error
+  })
 }
 
 export default runCommand

@@ -1,5 +1,6 @@
-import color from '@heroku-cli/color'
 import type * as Heroku from '@heroku-cli/schema'
+
+import * as color from '@heroku/heroku-cli-util/color'
 import nock from 'nock'
 import {stdout} from 'stdout-stderr'
 import stripAnsi from 'strip-ansi'
@@ -39,8 +40,8 @@ describe('slugs:index', () => {
 
   it('returns slugs', async () => {
     nock('https://api.heroku.com')
-      .get(`/apps/${app.name}/releases`)
-      .reply(200, releases)
+    .get(`/apps/${app.name}/releases`)
+    .reply(200, releases)
 
     await runCommand(Cmd, [
       '--app',
