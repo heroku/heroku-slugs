@@ -4,14 +4,12 @@ import * as color from '@heroku/heroku-cli-util/color'
 import nock from 'nock'
 import {stdout} from 'stdout-stderr'
 import stripAnsi from 'strip-ansi'
-import tsheredoc from 'tsheredoc'
+import heredoc from 'tsheredoc'
 import {afterEach, describe, it} from 'vitest'
 
 import Cmd from '../../../src/commands/slugs/index.js'
 import expectOutput from '../../helpers/expect-output.js'
 import runCommand from '../../helpers/run-command.js'
-
-const heredoc = tsheredoc.default
 
 describe('slugs:index', () => {
   const app = {
@@ -49,11 +47,11 @@ describe('slugs:index', () => {
       '--app',
       app.name,
     ])
-    expectOutput(stdout.output, heredoc(`
+    expectOutput(stdout.output, heredoc`
       === ${stripAnsi(color.app(app.name))} Slugs
 
       v1: slug1
       v2: slug2
-    `))
+    `)
   })
 })
