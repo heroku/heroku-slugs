@@ -1,7 +1,7 @@
+import {runCommand} from '@heroku-cli/test-utils'
 import {ux} from '@oclif/core/ux'
 import * as fs from 'fs-extra'
 import nock from 'nock'
-import {stderr, stdout} from 'stdout-stderr'
 import stripAnsi from 'strip-ansi'
 import {
   afterEach,
@@ -40,7 +40,6 @@ vi.mock('@heroku-cli/notifications', async importOriginal => {
 })
 
 const Cmd = (await import('../../../src/commands/slugs/download.js')).default
-const {default: runCommand} = await import('../../helpers/run-command.js')
 
 describe('slugs:download', () => {
   beforeEach(() => {
@@ -73,7 +72,7 @@ describe('slugs:download', () => {
       },
     })
 
-    await runCommand(Cmd, [
+    const {stderr, stdout} = await runCommand(Cmd, [
       '--app',
       'myapp',
       'slug-id',
@@ -82,8 +81,8 @@ describe('slugs:download', () => {
     expect(execSyncMock).toHaveBeenCalledWith('mkdir myapp')
     expect(execSyncMock).toHaveBeenCalledWith('tar -xf myapp/slug.tar.gz -C myapp')
     expect(downloadMock).toHaveBeenCalledWith('https://slug-url.com/slug.tgz', 'myapp/slug.tar.gz', {progress: true})
-    expect(stdout.output).toContain('Downloading slug slug-id to myapp/slug.tar.gz')
-    expect(stderr.output).toContain('Extracting myapp/slug.tar.gz... done')
+    expect(stdout).toContain('Downloading slug slug-id to myapp/slug.tar.gz')
+    expect(stderr).toContain('Extracting myapp/slug.tar.gz... done')
   })
 
   it('resolves the latest slug from releases when no slug is given', async () => {
@@ -99,13 +98,13 @@ describe('slugs:download', () => {
       },
     })
 
-    await runCommand(Cmd, [
+    const {stdout} = await runCommand(Cmd, [
       '--app',
       'myapp',
     ])
 
     expect(downloadMock).toHaveBeenCalledWith('https://slug-url.com/slug.tgz', 'myapp/slug.tar.gz', {progress: true})
-    expect(stdout.output).toContain('Downloading slug resolved-slug-id to myapp/slug.tar.gz')
+    expect(stdout).toContain('Downloading slug resolved-slug-id to myapp/slug.tar.gz')
   })
 
   it('errors when no slug is given and no release has a slug', async () => {
@@ -115,10 +114,11 @@ describe('slugs:download', () => {
       {id: 'release1', version: 1},
     ])
 
-    await expect(runCommand(Cmd, [
+    const {error} = await runCommand(Cmd, [
       '--app',
       'myapp',
-    ])).rejects.toThrow('No slug found. Specify the slug to download by its name or ID.')
+    ])
+    expect(error?.message).toContain('No slug found. Specify the slug to download by its name or ID.')
   })
 
   it('errors when the slug has no downloadable blob', async () => {
@@ -126,11 +126,12 @@ describe('slugs:download', () => {
     .get('/apps/myapp/slugs/slug-id')
     .reply(200, {})
 
-    await expect(runCommand(Cmd, [
+    const {error} = await runCommand(Cmd, [
       '--app',
       'myapp',
       'slug-id',
-    ])).rejects.toThrow('This slug has no blob to download.')
+    ])
+    expect(error?.message).toContain('This slug has no blob to download.')
   })
 
   it('does not extract the slug when --no-extract-slug is passed', async () => {
@@ -142,7 +143,7 @@ describe('slugs:download', () => {
       },
     })
 
-    await runCommand(Cmd, [
+    const {stderr} = await runCommand(Cmd, [
       '--app',
       'myapp',
       'slug-id',
@@ -151,7 +152,7 @@ describe('slugs:download', () => {
 
     expect(execSyncMock).toHaveBeenCalledWith('mkdir myapp')
     expect(execSyncMock).not.toHaveBeenCalledWith('tar -xf myapp/slug.tar.gz -C myapp')
-    expect(stderr.output).not.toContain('Extracting')
+    expect(stderr).not.toContain('Extracting')
   })
 
   it('sends a notification when the download takes longer than 10 seconds', async () => {

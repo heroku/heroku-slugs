@@ -2,9 +2,8 @@
   "declaration": false,
   "extends": "../tsconfig",
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "sourceMap": true
+    "sourceMap": true,
+    "rootDirs": ["./", "../src"]
   },
   "include": [
     "./**/*",
