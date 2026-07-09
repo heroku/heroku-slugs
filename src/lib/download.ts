@@ -1,23 +1,21 @@
-import * as https from 'https'
+import bytes from 'bytes'
 import * as fs from 'node:fs'
-import * as Path from 'node:path'
+import * as https from 'node:https'
+import {dirname} from 'node:path'
+import progress from 'smooth-progress'
+import tunnel from 'tunnel-agent'
 
-const progress = require('smooth-progress')
-const bytes = require('bytes')
-// eslint-disable-next-line n/no-extraneous-require
-const tunnel = require('tunnel-agent')
-
-export function download(url: string, path: string, opts: { progress: any }) {
+export function download(url: string, path: string, opts: {progress: boolean}) {
   return new Promise((fulfill, reject) => {
-    fs.mkdirSync(Path.dirname(path), {recursive: true})
+    fs.mkdirSync(dirname(path), {recursive: true})
     const file = fs.createWriteStream(path)
     const agent = makeAgent()
 
     https.get(url, {agent}, (rsp: any) => {
       if (opts.progress) showProgress(rsp)
       rsp.pipe(file)
-        .on('error', reject)
-        .on('close', fulfill)
+      .on('error', reject)
+      .on('close', fulfill)
     })
   })
 }
@@ -39,7 +37,7 @@ function makeAgent() {
 function showProgress(rsp: any) {
   const bar = progress({
     tmpl: 'Downloading... :bar :percent :eta :data',
-    total: parseInt(rsp.headers['content-length'], 10),
+    total: Number.parseInt(rsp.headers['content-length'], 10),
     width: 25,
   })
   let total = 0

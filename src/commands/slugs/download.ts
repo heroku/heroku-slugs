@@ -1,23 +1,22 @@
+import type * as Heroku from '@heroku-cli/schema'
+
 import {Command, flags} from '@heroku-cli/command'
 import {Notification, notify} from '@heroku-cli/notifications'
-import type * as Heroku from '@heroku-cli/schema'
-import {Args, ux} from '@oclif/core'
+import {Args} from '@oclif/core'
+import {ux} from '@oclif/core/ux'
 import {execSync} from 'node:child_process'
 
-import {download} from '../../lib/download'
+import {download} from '../../lib/download.js'
 
 export default class SlugsDownload extends Command {
   static args = {
     slug: Args.string({description: 'name or ID of slug'}),
   }
-
   static description = "download a slug's tarball to <APP_NAME>/slug.tar.gz and then extract the slug"
-
   static examples = [
     '$ heroku slugs:download --app example-app v2',
     '$ heroku slugs:download --app example-app v2 --no-extract-slug',
   ]
-
   static flags = {
     app: flags.app({required: true}),
     'no-extract-slug': flags.boolean({char: 'e', default: false, description: "don't extract slug after download"}),
@@ -43,7 +42,7 @@ export default class SlugsDownload extends Command {
     }
 
     if (!id) {
-      ux.error('No slug found. Specify the slug to download by its name or ID.')
+      this.error('No slug found. Specify the slug to download by its name or ID.')
     }
 
     const {body: appSlug} = await this.heroku.get<Heroku.Slug>(`/apps/${app}/slugs/${id}`)
@@ -51,7 +50,7 @@ export default class SlugsDownload extends Command {
       this.error('This slug has no blob to download.')
     }
 
-    ux.log(`Downloading slug ${id} to ${app}/slug.tar.gz`)
+    ux.stdout(`Downloading slug ${id} to ${app}/slug.tar.gz`)
     const downloadStarted = Date.now()
     execSync(`mkdir ${app}`)
     await download(appSlug.blob.url, `${app}/slug.tar.gz`, {progress: true})
@@ -64,7 +63,7 @@ export default class SlugsDownload extends Command {
 
     const downloadTime = Date.now() - downloadStarted
     if (downloadTime > 10 * 1000) {
-      const notification: { subtitle?: string } & Notification = {
+      const notification: Notification & {subtitle?: string} = {
         message: 'download is finished',
         subtitle: 'heroku slugs:download',
         title: app,
