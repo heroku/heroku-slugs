@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.0.0](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v2.0.3...heroku-slugs-v3.0.0) (2026-07-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate to ESM and oclif/core v4 ([#100](https://github.com/heroku/heroku-slugs/issues/100))
+
+### Dependencies
+
+* bump @heroku/heroku-cli-util from 10.8.0 to 10.9.1 ([#105](https://github.com/heroku/heroku-slugs/issues/105)) ([171c682](https://github.com/heroku/heroku-slugs/commit/171c682a4edd4882eb3158c3b86b64b33ae79952))
+* bump @oclif/core from 4.11.13 to 4.11.14 ([#104](https://github.com/heroku/heroku-slugs/issues/104)) ([9c2df7f](https://github.com/heroku/heroku-slugs/commit/9c2df7fe45634d80f6bb5f9108df6bbb432ccb71))
+
+
+### Code Refactoring
+
+* migrate to ESM and oclif/core v4 ([#100](https://github.com/heroku/heroku-slugs/issues/100)) ([e9c631a](https://github.com/heroku/heroku-slugs/commit/e9c631a432af501a51887eebf5ca33686a3677c8))
+
 ## [2.0.3](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v2.0.2...heroku-slugs-v2.0.3) (2026-06-11)
 
 
