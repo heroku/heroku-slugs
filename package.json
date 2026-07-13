@@ -31,7 +31,7 @@
     "fs-extra": "^11.3.0",
     "nock": "^14.0.0",
     "oclif": "^4.23.0",
-    "strip-ansi": "^6.0.1",
+    "strip-ansi": "^7.2.0",
     "tsheredoc": "^1.0.1",
     "typescript": "^5.8.2",
     "vitest": "^3.2.4"
