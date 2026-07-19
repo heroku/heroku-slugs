@@ -24,7 +24,7 @@
     "@types/chai": "^4.3.20",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.15.3",
-    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/coverage-v8": "^4.1.10",
     "chai": "^5.3.3",
     "eslint": "^9.39.4",
     "eslint-config-oclif": "^6.0.144",
