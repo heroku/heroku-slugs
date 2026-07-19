@@ -32,7 +32,7 @@
     "nock": "^14.0.0",
     "oclif": "^4.23.0",
     "strip-ansi": "^7.2.0",
-    "tsheredoc": "^1.0.1",
+    "tsheredoc": "^2.0.0",
     "typescript": "^5.8.2",
     "vitest": "^3.2.4"
   },
