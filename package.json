@@ -8,7 +8,7 @@
     "url": "https://github.com/heroku/heroku-slugs/issues"
   },
   "dependencies": {
-    "@heroku-cli/command": "~13.0.0",
+    "@heroku-cli/command": "~13.1.0",
     "@heroku-cli/notifications": "^1.2.7",
     "@heroku/heroku-cli-util": "10.9.1",
     "@oclif/core": "^4.3.0",
