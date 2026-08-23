@@ -34,7 +34,7 @@
     "strip-ansi": "^7.2.0",
     "tsheredoc": "^2.0.0",
     "typescript": "^5.8.2",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.11"
   },
   "engines": {
     "node": ">= 20"
