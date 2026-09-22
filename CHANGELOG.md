@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.2](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v3.0.1...heroku-slugs-v3.0.2) (2026-09-22)
+
+
+### Dependencies
+
+* bump @heroku-cli/command from 13.1.0 to 13.2.0 ([#135](https://github.com/heroku/heroku-slugs/issues/135)) ([50460c6](https://github.com/heroku/heroku-slugs/commit/50460c6ad494385c5409e7e3628bf4ed2f3f4466))
+* bump @heroku-cli/notifications from 1.2.7 to 1.2.9 ([#134](https://github.com/heroku/heroku-slugs/issues/134)) ([d1cc515](https://github.com/heroku/heroku-slugs/commit/d1cc5155c7b478afb8d0a8fc97e198a6e78e437a))
+* bump @heroku/heroku-cli-util from 10.9.1 to 10.10.0 ([#127](https://github.com/heroku/heroku-slugs/issues/127)) ([6a4d47c](https://github.com/heroku/heroku-slugs/commit/6a4d47c2162c407bced3fa9072ea446e100b4bd2))
+* bump @oclif/core from 4.11.14 to 4.14.0 ([#126](https://github.com/heroku/heroku-slugs/issues/126)) ([7096ec4](https://github.com/heroku/heroku-slugs/commit/7096ec4195af2b2738acdb1bd219fdb870316926))
+* bump @vitest/mocker, @vitest/coverage-v8 and vitest ([#131](https://github.com/heroku/heroku-slugs/issues/131)) ([42a43f9](https://github.com/heroku/heroku-slugs/commit/42a43f9f3b58ead41c1e613677df110af5adfd93))
+
 ## [3.0.1](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v3.0.0...heroku-slugs-v3.0.1) (2026-08-20)
 
 
