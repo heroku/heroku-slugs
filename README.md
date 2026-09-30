@@ -34,9 +34,14 @@ $ heroku slugs:download 00000000-bbbb-cccc-dddd-eeeeeeeeeeee -a appname
 # Usage
   <!-- usage -->
 ```sh-session
-$ heroku plugins:install @heroku-cli/heroku-slugs
+$ npm install -g @heroku-cli/heroku-slugs
 $ heroku COMMAND
 running command...
+$ heroku (--version)
+@heroku-cli/heroku-slugs/3.0.2 darwin-arm64 node-v22.22.3
+$ heroku --help [COMMAND]
+USAGE
+  $ heroku COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -52,11 +57,14 @@ list recent slugs on application
 
 ```
 USAGE
-  $ heroku slugs -a <value> [-r <value>]
+  $ heroku slugs -a <value> [--prompt] [-r <value>]
 
 FLAGS
-  -a, --app=<value>     (required) app to run command against
+  -a, --app=<value>     (required) [env: HEROKU_APP] app to run command against
   -r, --remote=<value>  git remote of app to use
+
+GLOBAL FLAGS
+  --prompt  interactively prompt for command arguments and flags
 
 DESCRIPTION
   list recent slugs on application
@@ -65,7 +73,7 @@ EXAMPLES
   $ heroku slugs --app myapp
 ```
 
-_See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/blob/v2.0.0/src/commands/slugs/index.ts)_
+_See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/blob/heroku-slugs-v3.0.2/src/commands/slugs/index.ts)_
 
 ## `heroku slugs:download [SLUG]`
 
@@ -73,15 +81,18 @@ download a slug's tarball to <APP_NAME>/slug.tar.gz and then extract the slug
 
 ```
 USAGE
-  $ heroku slugs:download [SLUG] -a <value> [-e] [-r <value>]
+  $ heroku slugs:download [SLUG] -a <value> [--prompt] [-e] [-r <value>]
 
 ARGUMENTS
-  SLUG  name or ID of slug
+  [SLUG]  name or ID of slug
 
 FLAGS
-  -a, --app=<value>      (required) app to run command against
-  -e, --no-extract-slug  skip extracting slug after download
+  -a, --app=<value>      (required) [env: HEROKU_APP] app to run command against
+  -e, --no-extract-slug  don't extract slug after download
   -r, --remote=<value>   git remote of app to use
+
+GLOBAL FLAGS
+  --prompt  interactively prompt for command arguments and flags
 
 DESCRIPTION
   download a slug's tarball to <APP_NAME>/slug.tar.gz and then extract the slug
@@ -92,5 +103,5 @@ EXAMPLES
   $ heroku slugs:download --app example-app v2 --no-extract-slug
 ```
 
-_See code: [src/commands/slugs/download.ts](https://github.com/heroku/heroku-slugs/blob/v2.0.0/src/commands/slugs/download.ts)_
+_See code: [src/commands/slugs/download.ts](https://github.com/heroku/heroku-slugs/blob/heroku-slugs-v3.0.2/src/commands/slugs/download.ts)_
 <!-- commandsstop -->
