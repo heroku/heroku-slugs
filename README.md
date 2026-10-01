@@ -29,6 +29,7 @@ $ heroku slugs:download 00000000-bbbb-cccc-dddd-eeeeeeeeeeee -a appname
 * [Heroku Slugs CLI Plugin](#heroku-slugs-cli-plugin)
 * [Usage](#usage)
 * [Commands](#commands)
+* [Command Topics](#command-topics)
 <!-- tocstop -->
 
 # Usage
@@ -38,7 +39,7 @@ $ npm install -g @heroku-cli/heroku-slugs
 $ heroku COMMAND
 running command...
 $ heroku (--version)
-@heroku-cli/heroku-slugs/3.0.2 darwin-arm64 node-v22.22.3
+@heroku-cli/heroku-slugs/3.0.3 linux-x64 node-v22.23.2
 $ heroku --help [COMMAND]
 USAGE
   $ heroku COMMAND
@@ -48,60 +49,8 @@ USAGE
 
 # Commands
   <!-- commands -->
-* [`heroku slugs`](#heroku-slugs)
-* [`heroku slugs:download [SLUG]`](#heroku-slugsdownload-slug)
+# Command Topics
 
-## `heroku slugs`
+* [`heroku slugs`](docs/slugs.md) - manage and download slugs
 
-list recent slugs on application
-
-```
-USAGE
-  $ heroku slugs -a <value> [--prompt] [-r <value>]
-
-FLAGS
-  -a, --app=<value>     (required) [env: HEROKU_APP] app to run command against
-  -r, --remote=<value>  git remote of app to use
-
-GLOBAL FLAGS
-  --prompt  interactively prompt for command arguments and flags
-
-DESCRIPTION
-  list recent slugs on application
-
-EXAMPLES
-  $ heroku slugs --app myapp
-```
-
-_See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/blob/heroku-slugs-v3.0.2/src/commands/slugs/index.ts)_
-
-## `heroku slugs:download [SLUG]`
-
-download a slug's tarball to <APP_NAME>/slug.tar.gz and then extract the slug
-
-```
-USAGE
-  $ heroku slugs:download [SLUG] -a <value> [--prompt] [-e] [-r <value>]
-
-ARGUMENTS
-  [SLUG]  name or ID of slug
-
-FLAGS
-  -a, --app=<value>      (required) [env: HEROKU_APP] app to run command against
-  -e, --no-extract-slug  don't extract slug after download
-  -r, --remote=<value>   git remote of app to use
-
-GLOBAL FLAGS
-  --prompt  interactively prompt for command arguments and flags
-
-DESCRIPTION
-  download a slug's tarball to <APP_NAME>/slug.tar.gz and then extract the slug
-
-EXAMPLES
-  $ heroku slugs:download --app example-app v2
-
-  $ heroku slugs:download --app example-app v2 --no-extract-slug
-```
-
-_See code: [src/commands/slugs/download.ts](https://github.com/heroku/heroku-slugs/blob/heroku-slugs-v3.0.2/src/commands/slugs/download.ts)_
 <!-- commandsstop -->
