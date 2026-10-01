@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.0.3](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v3.0.2...heroku-slugs-v3.0.3) (2026-10-01)
+
+
+### Bug Fixes
+
+* correct broken source links in generated command docs ([#145](https://github.com/heroku/heroku-slugs/issues/145)) ([4ccd8fc](https://github.com/heroku/heroku-slugs/commit/4ccd8fc21d9eb3c64bd0dacde6c8421777df2ead))
+
+
+### Dependencies
+
+* bump @heroku-cli/command from 13.2.0 to 13.2.1 ([#141](https://github.com/heroku/heroku-slugs/issues/141)) ([904335e](https://github.com/heroku/heroku-slugs/commit/904335ed2b2032f255e86ffb477b6cf9b7ff8614))
+* bump brace-expansion ([#146](https://github.com/heroku/heroku-slugs/issues/146)) ([be63c57](https://github.com/heroku/heroku-slugs/commit/be63c57c6765a569f0d4522156c6923059084b1d))
+
 ## [3.0.2](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v3.0.1...heroku-slugs-v3.0.2) (2026-09-22)
 
 
