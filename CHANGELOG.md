@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.4](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v3.0.3...heroku-slugs-v3.0.4) (2026-10-14)
+
+
+### Dependencies
+
+* bump @heroku-cli/command from 13.2.1 to 13.2.3 ([#151](https://github.com/heroku/heroku-slugs/issues/151)) ([6ec2b21](https://github.com/heroku/heroku-slugs/commit/6ec2b2192ff8fca74f210f954b7889536a4958f1))
+
 ## [3.0.3](https://github.com/heroku/heroku-slugs/compare/heroku-slugs-v3.0.2...heroku-slugs-v3.0.3) (2026-10-01)
 
 

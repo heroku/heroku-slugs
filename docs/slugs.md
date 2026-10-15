@@ -28,7 +28,7 @@ EXAMPLES
   $ heroku slugs --app myapp
 ```
 
-_See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/blob/heroku-slugs-v3.0.3/src/commands/slugs/index.ts)_
+_See code: [src/commands/slugs/index.ts](https://github.com/heroku/heroku-slugs/blob/heroku-slugs-v3.0.4/src/commands/slugs/index.ts)_
 
 ## `heroku slugs:download [SLUG]`
 
@@ -58,4 +58,4 @@ EXAMPLES
   $ heroku slugs:download --app example-app v2 --no-extract-slug
 ```
 
-_See code: [src/commands/slugs/download.ts](https://github.com/heroku/heroku-slugs/blob/heroku-slugs-v3.0.3/src/commands/slugs/download.ts)_
+_See code: [src/commands/slugs/download.ts](https://github.com/heroku/heroku-slugs/blob/heroku-slugs-v3.0.4/src/commands/slugs/download.ts)_
