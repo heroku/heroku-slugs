@@ -39,7 +39,7 @@ $ npm install -g @heroku-cli/heroku-slugs
 $ heroku COMMAND
 running command...
 $ heroku (--version)
-@heroku-cli/heroku-slugs/3.0.3 linux-x64 node-v22.23.2
+@heroku-cli/heroku-slugs/3.0.4 linux-x64 node-v22.23.4
 $ heroku --help [COMMAND]
 USAGE
   $ heroku COMMAND
